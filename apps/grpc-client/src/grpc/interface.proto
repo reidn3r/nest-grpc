@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package interface;
+
+service NotificationService {
+  rpc run(UserDTO) returns (NotificationResponseDTO) {}
+}
+
+message UserDTO {
+  string name = 1;
+}
+
+message NotificationResponseDTO {
+  int32 id = 1;
+  string message = 2;
+  string date = 3;
+}
